@@ -353,7 +353,7 @@ class MacroResolver(Borg):
 
             for timeperiod in self.timeperiods:
                 if timeperiod.get_name() == timeperiod_arg:
-                    return str(int(func_to_call(timestamp)))
+                    return str(int(func_to_call(timeperiod,timestamp)))
             return failed_output
         # Len 3 == service, 2 = all others types...
         elif nb_parts == 3:
